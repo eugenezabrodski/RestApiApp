@@ -79,9 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				AFFB8B7A2958482B007356A3 /* Models */,
-				AF54712D29530E880055F4EA /* Delegates */,
-				AF54712E29530EA70055F4EA /* Controllers */,
 				AF54712C29530E7B0055F4EA /* Views */,
+				AF54712E29530EA70055F4EA /* Controllers */,
+				AF54712D29530E880055F4EA /* Delegates */,
 				AF54712129530E200055F4EA /* Assets.xcassets */,
 				AF54712629530E200055F4EA /* Info.plist */,
 			);
@@ -119,14 +119,11 @@
 		AF54713329531D860055F4EA /* ActionsFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AF54712F295310EE0055F4EA /* ActionsCVC.swift */,
-				AF547131295312090055F4EA /* ActionCollectionViewCell.swift */,
-				AF54713429531DB20055F4EA /* ImageVC.swift */,
-				AFFB8B7D29584C24007356A3 /* UsersTVC.swift */,
-				AFFB8B7F29585589007356A3 /* DetailUserVC.swift */,
-				AFFB8B83295882BC007356A3 /* PostsTVC.swift */,
-				AFFB8B8729588CB1007356A3 /* CommentsTVC.swift */,
-				AFFB8B8B29589560007356A3 /* MapVC.swift */,
+				AFFB8B8D2958B9F6007356A3 /* Actions */,
+				AFFB8B8E2958BA05007356A3 /* ImageVC */,
+				AFFB8B8F2958BA15007356A3 /* UsersVC */,
+				AFFB8B902958BA20007356A3 /* PostsandCommentsVC */,
+				AFFB8B912958BA2F007356A3 /* MapVC */,
 			);
 			path = ActionsFlow;
 			sourceTree = "<group>";
@@ -138,6 +135,49 @@
 				AFFB8B8529588578007356A3 /* ApiConstants.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AFFB8B8D2958B9F6007356A3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				AF54712F295310EE0055F4EA /* ActionsCVC.swift */,
+				AF547131295312090055F4EA /* ActionCollectionViewCell.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		AFFB8B8E2958BA05007356A3 /* ImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				AF54713429531DB20055F4EA /* ImageVC.swift */,
+			);
+			path = ImageVC;
+			sourceTree = "<group>";
+		};
+		AFFB8B8F2958BA15007356A3 /* UsersVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFFB8B7D29584C24007356A3 /* UsersTVC.swift */,
+				AFFB8B7F29585589007356A3 /* DetailUserVC.swift */,
+			);
+			path = UsersVC;
+			sourceTree = "<group>";
+		};
+		AFFB8B902958BA20007356A3 /* PostsandCommentsVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFFB8B83295882BC007356A3 /* PostsTVC.swift */,
+				AFFB8B8729588CB1007356A3 /* CommentsTVC.swift */,
+			);
+			path = PostsandCommentsVC;
+			sourceTree = "<group>";
+		};
+		AFFB8B912958BA2F007356A3 /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFFB8B8B29589560007356A3 /* MapVC.swift */,
+			);
+			path = MapVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
