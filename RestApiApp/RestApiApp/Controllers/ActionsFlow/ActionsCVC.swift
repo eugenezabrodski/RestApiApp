@@ -21,7 +21,6 @@ class ActionsCVC: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return userActions.count
     }
 
