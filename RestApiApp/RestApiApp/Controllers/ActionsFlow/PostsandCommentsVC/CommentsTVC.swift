@@ -16,6 +16,11 @@ class CommentsTVC: UITableViewController {
     
     // MARK: - Life cicle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         fetchPosts()
     }
@@ -32,6 +37,10 @@ class CommentsTVC: UITableViewController {
         cell.textLabel?.text = comments.email
         cell.detailTextLabel?.text = comments.body
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     // MARK: - Methods
