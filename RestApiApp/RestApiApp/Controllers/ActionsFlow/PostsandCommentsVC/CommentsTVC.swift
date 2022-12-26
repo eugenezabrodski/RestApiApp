@@ -9,12 +9,18 @@ import UIKit
 
 class CommentsTVC: UITableViewController {
     
+    // MARK: - Methods
+    
     var post: Post?
     var comments: [Comment] = []
+    
+    // MARK: - Life cicle
     
     override func viewWillAppear(_ animated: Bool) {
         fetchPosts()
     }
+    
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         comments.count
@@ -27,6 +33,8 @@ class CommentsTVC: UITableViewController {
         cell.detailTextLabel?.text = comments.body
         return cell
     }
+    
+    // MARK: - Methods
     
     func fetchPosts() {
         guard let postId = post?.id else { return }

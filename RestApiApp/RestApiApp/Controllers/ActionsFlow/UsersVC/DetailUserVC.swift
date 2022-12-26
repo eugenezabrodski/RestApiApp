@@ -9,6 +9,8 @@ import UIKit
 
 class DetailUserVC: UIViewController {
     
+    //MARK: - Properties
+    
     var user: User?
     
     @IBOutlet weak var name: UILabel!
@@ -17,10 +19,14 @@ class DetailUserVC: UIViewController {
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var website: UILabel!
     
+    //MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+    
+    //MARK: - Metods
     
     @IBAction func adressAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Adress", bundle: nil)
@@ -49,16 +55,5 @@ class DetailUserVC: UIViewController {
         phone.text = user?.phone
         website.text = user?.website
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -329,7 +329,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Qu-wa-t7W"/>
-                        <color key="backgroundColor" red="0.46945326106857921" green="0.7803921568627451" blue="0.76307239749304256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.5746840261811712" green="0.63413066356411985" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rNp-XT-M70" firstAttribute="leading" secondItem="0Qu-wa-t7W" secondAttribute="leading" constant="15" id="Brc-A2-bmH"/>
                             <constraint firstItem="rNp-XT-M70" firstAttribute="top" secondItem="0Qu-wa-t7W" secondAttribute="top" constant="15" id="GmR-x9-dVs"/>

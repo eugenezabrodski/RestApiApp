@@ -10,7 +10,5 @@ import UIKit
 class ActionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var infoLabel: UILabel!
-    
-    
-    
+ 
 }

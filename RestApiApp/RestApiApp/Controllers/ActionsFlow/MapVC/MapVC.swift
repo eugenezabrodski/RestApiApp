@@ -10,15 +10,21 @@ import MapKit
 
 class MapVC: UIViewController {
     
+    // MARK: - Properties
+    
     var user: User?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var infoLbl: UILabel!
     
+    // MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentLocation()
     }
+    
+    // MARK: - Methods
     
     func currentLocation() {
         infoLbl.text = user?.address?.city
@@ -29,6 +35,8 @@ class MapVC: UIViewController {
         mapView.centerLocation(currentLocation)
     }
 }
+
+// MARK: - Extensions
 
 extension MKMapView {
     func centerLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
