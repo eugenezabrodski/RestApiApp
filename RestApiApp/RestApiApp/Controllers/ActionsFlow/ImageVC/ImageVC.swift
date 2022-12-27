@@ -9,20 +9,25 @@ import UIKit
 
 class ImageVC: UIViewController {
     
+    //MARK: - Properties
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let imageURL = "https://upload.wikimedia.org/wikipedia/commons/3/3d/LARGE_elevation.jpg"
+    
+    //MARK: - Life cicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImage()
     }
     
+    //MARK: - Methods
+    
     private func fetchImage() {
         guard let url = URL(string: imageURL) else { return }
         let uRLRequest = URLRequest(url: url)
-        
         
         let data = URLSession.shared.dataTask(with: uRLRequest) { data, urlResponse, error in
             
@@ -47,7 +52,5 @@ class ImageVC: UIViewController {
         }
         }
         data.resume()
-        
 }
-
 }

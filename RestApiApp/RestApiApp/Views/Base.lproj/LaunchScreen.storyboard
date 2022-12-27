@@ -15,25 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeJ-hM-Ndj">
-                                <rect key="frame" x="170" y="344" width="74" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest API APP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeJ-hM-Ndj">
+                                <rect key="frame" x="170" y="344" width="74" height="98"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="personalhotspot" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-TZ-xOu">
+                                <rect key="frame" x="50" y="469" width="314" height="139"/>
+                                <color key="tintColor" red="0.4857160224" green="0.90998878439999997" blue="0.85893694970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.51331495835306473" green="0.51418777774118363" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VeJ-hM-Ndj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="4yq-XO-Cbu"/>
                             <constraint firstItem="VeJ-hM-Ndj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="DaD-OK-csB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VeJ-hM-Ndj" secondAttribute="trailing" constant="170" id="Hx3-bi-PEV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D0h-TZ-xOu" secondAttribute="bottom" constant="252" id="MEv-lg-kRK"/>
+                            <constraint firstItem="D0h-TZ-xOu" firstAttribute="top" secondItem="VeJ-hM-Ndj" secondAttribute="bottom" constant="25" id="cep-Pf-CIp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D0h-TZ-xOu" secondAttribute="trailing" constant="50" id="fOF-Cn-7RJ"/>
+                            <constraint firstItem="D0h-TZ-xOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tDW-W6-BTm"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-245" y="371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
+    </resources>
 </document>

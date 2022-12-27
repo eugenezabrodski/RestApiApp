@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MapVC" customModule="RestApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-qN-Ppy">
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzw-Ek-wgF">
+                                <rect key="frame" x="100" y="69" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zL4-qN-Ppy" secondAttribute="trailing" id="52g-d6-9eJ"/>
+                            <constraint firstItem="xzw-Ek-wgF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="DB9-fK-8oq"/>
+                            <constraint firstItem="zL4-qN-Ppy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QSb-KC-EwU"/>
+                            <constraint firstItem="xzw-Ek-wgF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="TSY-ei-9Is"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zL4-qN-Ppy" secondAttribute="bottom" id="qxF-LO-j9Z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xzw-Ek-wgF" secondAttribute="trailing" constant="100" id="wQG-Hh-wRl"/>
+                            <constraint firstItem="zL4-qN-Ppy" firstAttribute="top" secondItem="xzw-Ek-wgF" secondAttribute="bottom" constant="25" id="wS9-72-mjZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLbl" destination="xzw-Ek-wgF" id="5nV-43-fLi"/>
+                        <outlet property="mapView" destination="zL4-qN-Ppy" id="2oa-jL-Yqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
