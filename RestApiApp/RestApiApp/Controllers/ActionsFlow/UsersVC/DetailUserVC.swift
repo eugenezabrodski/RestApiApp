@@ -43,6 +43,10 @@ class DetailUserVC: UIViewController {
     }
     
     @IBAction func albumsAction() {
+        let storyboard = UIStoryboard(name: "Albums", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AlbumsTVC") as! AlbumsTVC
+        vc.user = user
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func todosAction() {

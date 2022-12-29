@@ -15,6 +15,8 @@
 		AF547130295310EE0055F4EA /* ActionsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54712F295310EE0055F4EA /* ActionsCVC.swift */; };
 		AF547132295312090055F4EA /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF547131295312090055F4EA /* ActionCollectionViewCell.swift */; };
 		AF54713529531DB20055F4EA /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54713429531DB20055F4EA /* ImageVC.swift */; };
+		AF6530CD295D8249000588C8 /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6530CC295D8249000588C8 /* Albums.storyboard */; };
+		AF6530D0295D86E9000588C8 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6530CF295D86E9000588C8 /* AlbumsTVC.swift */; };
 		AF6B858B295C3B80006AC682 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B858A295C3B80006AC682 /* NewPostVC.swift */; };
 		AF6B858E295C4B42006AC682 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AF6B858D295C4B42006AC682 /* SwiftyJSON */; };
 		AF6B8591295C5CC0006AC682 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF6B8590295C5CC0006AC682 /* Alamofire */; };
@@ -46,6 +48,8 @@
 		AF54712F295310EE0055F4EA /* ActionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsCVC.swift; sourceTree = "<group>"; };
 		AF547131295312090055F4EA /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF54713429531DB20055F4EA /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		AF6530CC295D8249000588C8 /* Albums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Albums.storyboard; sourceTree = "<group>"; };
+		AF6530CF295D86E9000588C8 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
 		AF6B858A295C3B80006AC682 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 		AF6B8596295C6917006AC682 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AFFB8B7B29584852007356A3 /* Models User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models User.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				AF54711E29530E1B0055F4EA /* Main.storyboard */,
 				AFFB8B812958819B007356A3 /* PostFlow.storyboard */,
 				AFFB8B89295894F8007356A3 /* Adress.storyboard */,
+				AF6530CC295D8249000588C8 /* Albums.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,9 +147,18 @@
 				AFFB8B8E2958BA05007356A3 /* ImageVC */,
 				AFFB8B8F2958BA15007356A3 /* UsersVC */,
 				AFFB8B902958BA20007356A3 /* PostsandCommentsVC */,
+				AF6530CE295D86BF000588C8 /* Albums */,
 				AFFB8B912958BA2F007356A3 /* MapVC */,
 			);
 			path = ActionsFlow;
+			sourceTree = "<group>";
+		};
+		AF6530CE295D86BF000588C8 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				AF6530CF295D86E9000588C8 /* AlbumsTVC.swift */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 		AF6B8595295C68F4006AC682 /* NetworkService */ = {
@@ -282,6 +296,7 @@
 			files = (
 				AFFB8B822958819B007356A3 /* PostFlow.storyboard in Resources */,
 				AF54712529530E200055F4EA /* LaunchScreen.storyboard in Resources */,
+				AF6530CD295D8249000588C8 /* Albums.storyboard in Resources */,
 				AF54712229530E200055F4EA /* Assets.xcassets in Resources */,
 				AF54712029530E1B0055F4EA /* Main.storyboard in Resources */,
 				AFFB8B8A295894F8007356A3 /* Adress.storyboard in Resources */,
@@ -312,6 +327,7 @@
 				AFFB8B932959A4F3007356A3 /* Model Adress.swift in Sources */,
 				AFFB8B972959A5B0007356A3 /* ModelsPostsAndComments.swift in Sources */,
 				AFFB8B7E29584C24007356A3 /* UsersTVC.swift in Sources */,
+				AF6530D0295D86E9000588C8 /* AlbumsTVC.swift in Sources */,
 				AF54711B29530E1B0055F4EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
