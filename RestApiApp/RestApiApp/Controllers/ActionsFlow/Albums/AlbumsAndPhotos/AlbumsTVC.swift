@@ -43,6 +43,15 @@ class AlbumsTVC: UITableViewController {
         performSegue(withIdentifier: "showPhoto", sender: album)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhoto",
+           let photosCVC = segue.destination as? PhotosCVC,
+           let album = sender as? JSON {
+            photosCVC.user = user
+            photosCVC.album = album
+        }
+    }
+    
     //MARK: - Methods
     
     private func getData() {
