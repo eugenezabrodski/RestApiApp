@@ -12,10 +12,14 @@ import AlamofireImage
 
 final class PhotoVC: UIViewController {
 
+    // MARK: - Properties
+    
     @IBOutlet private weak var photoImage: UIImageView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     var photo: JSON?
+    
+    // MARK: - Life cicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,8 @@ final class PhotoVC: UIViewController {
         getPhoto()
     }
 
+    // MARK: - Methods
+    
     private func getPhoto() {
         guard let photo = photo,
         let imageURL = photo["url"].string else { return }

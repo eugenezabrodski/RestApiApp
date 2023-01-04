@@ -11,15 +11,18 @@ import Alamofire
 
 class AlbumsTVC: UITableViewController {
     
+    // MARK: - Properties
+    
     var user: User!
     var albums: [JSON] = []
 
+    // MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
     }
     
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

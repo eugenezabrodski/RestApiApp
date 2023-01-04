@@ -11,6 +11,8 @@ import AlamofireImage
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - Properties
+    
     @IBOutlet weak var degaultImage: UIImageView!    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -20,10 +22,13 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Life cicle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
+    // MARK: - Methods
     
     private func getThumbnail() {
         guard let thumbnailUrl = thumbnailUrl else { return }

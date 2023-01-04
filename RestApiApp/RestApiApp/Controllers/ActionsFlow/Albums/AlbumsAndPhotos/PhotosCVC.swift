@@ -11,10 +11,14 @@ import SwiftyJSON
 
 class PhotosCVC: UICollectionViewController {
     
+    // MARK: - Properties
+    
     var user: User!
     var album: JSON!
     var photos: [JSON] = []
 
+    // MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,10 +34,7 @@ class PhotosCVC: UICollectionViewController {
         collectionView.collectionViewLayout = collectionViewFlowLayout
     }
 
-
     // MARK: UICollectionViewDataSource
-
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -59,6 +60,8 @@ class PhotosCVC: UICollectionViewController {
             photoVC.photo = photo
         }
     }
+    
+    // MARK: - Methods
     
     private func getData() {
         guard let album = album,

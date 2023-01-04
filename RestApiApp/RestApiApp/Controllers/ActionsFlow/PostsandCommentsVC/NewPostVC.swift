@@ -11,15 +11,21 @@ import Alamofire
 
 class NewPostVC: UIViewController {
     
+    // MARK: - Properties
+    
     var user: User?
 
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var bodyTV: UITextView!
     
+    // MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
     }
+    
+    // MARK: - Methods
     
     @IBAction func urlAction() {
         if let userId = user?.id,
@@ -82,6 +88,8 @@ class NewPostVC: UIViewController {
     
     
 }
+
+// MARK: - Extension
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
