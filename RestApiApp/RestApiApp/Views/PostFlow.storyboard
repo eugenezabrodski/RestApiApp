@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,11 +47,80 @@
                             <outlet property="delegate" destination="CkW-f2-ZeX" id="LHv-11-LZo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Posts" id="4TF-70-54g"/>
+                    <navigationItem key="navigationItem" title="Posts" id="4TF-70-54g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MDp-Je-UTX">
+                            <connections>
+                                <segue destination="sGf-4S-wjt" kind="show" id="lUZ-4L-8se"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSS-N8-ZUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="94"/>
+        </scene>
+        <!--New PostVC-->
+        <scene sceneID="b1T-OQ-TfY">
+            <objects>
+                <viewController id="sGf-4S-wjt" customClass="NewPostVC" customModule="RestApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3bx-vs-gzd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="rze-l7-5zk">
+                                <rect key="frame" x="25" y="94" width="364" height="429"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcK-f3-GtF">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ii9-d3-eQ8">
+                                        <rect key="frame" x="0.0" y="109" width="364" height="108"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P0-RM-fWK">
+                                        <rect key="frame" x="0.0" y="292" width="364" height="31"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Post with URLSession"/>
+                                        <connections>
+                                            <action selector="urlAction" destination="sGf-4S-wjt" eventType="touchUpInside" id="2sH-fz-ghd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-CG-8kq">
+                                        <rect key="frame" x="0.0" y="398" width="364" height="31"/>
+                                        <color key="tintColor" red="1" green="0.1165202258" blue="0.16476841219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Post with Alamofire"/>
+                                        <connections>
+                                            <action selector="alamofireAction:" destination="sGf-4S-wjt" eventType="touchUpInside" id="2t3-Kb-frU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0NN-Nt-HHs"/>
+                        <color key="backgroundColor" red="0.879759785745166" green="0.879759785745166" blue="0.879759785745166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rze-l7-5zk" firstAttribute="leading" secondItem="0NN-Nt-HHs" secondAttribute="leading" constant="25" id="6TB-XU-XIL"/>
+                            <constraint firstItem="rze-l7-5zk" firstAttribute="top" secondItem="0NN-Nt-HHs" secondAttribute="top" constant="50" id="6x9-iB-sa1"/>
+                            <constraint firstItem="0NN-Nt-HHs" firstAttribute="trailing" secondItem="rze-l7-5zk" secondAttribute="trailing" constant="25" id="HtR-33-Ahq"/>
+                            <constraint firstItem="0NN-Nt-HHs" firstAttribute="bottom" secondItem="rze-l7-5zk" secondAttribute="bottom" constant="319" id="sah-Wk-T43"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7eY-bQ-uxn"/>
+                    <connections>
+                        <outlet property="bodyTV" destination="ii9-d3-eQ8" id="DJ8-o9-AOU"/>
+                        <outlet property="titleTF" destination="wcK-f3-GtF" id="0SW-n4-4zw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRU-Cw-YSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="94"/>
         </scene>
         <!--CommentsTVC-->
         <scene sceneID="eC2-Jo-KjT">
@@ -94,12 +164,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqe-Gh-NiO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="94"/>
+            <point key="canvasLocation" x="2232" y="94"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
